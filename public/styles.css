@@ -1,0 +1,258 @@
+.my_table {
+    width: 100%;
+    font-family: arial, sans-serif;
+    background-color: lightcyan;
+}
+.objectColor{
+    color: blue;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px ;
+    text-align: left;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    border-collapse: collapse;
+    background-color: #dddddd;
+}
+
+
+
+/*body {*/
+    /*padding: 50px;*/
+    /*background-color: #66CCFF;*/
+    /*font-family: sans-serif;*/
+/*}*/
+/*.todoList .header input {*/
+    /*padding: 10px;*/
+    /*font-size: 16px;*/
+    /*border: 2px solid #FFF;*/
+/*}*/
+/*.todoList .header button {*/
+    /*padding: 10px;*/
+    /*font-size: 16px;*/
+    /*margin: 10px;*/
+    /*background-color: #0066FF;*/
+    /*color: #FFF;*/
+    /*border: 2px solid #0066FF;*/
+/*}*/
+
+/*.todoList .header button:hover {*/
+    /*background-color: #003399;*/
+    /*border: 2px solid #003399;*/
+    /*cursor: pointer;*/
+/*}*/
+
+
+/*目前有取得兩個值，一個是新的值，一個是舊的要淘汰的值：*/
+/*import React from 'react'*/
+/*import ReactDOM from 'react-dom'*/
+/*import $ from 'jquery'*/
+
+/*var settings = {*/
+/*"async": true,*/
+/*"crossDomain": true,*/
+/*"url": "https://api-staging.pro360.com.tw:443/apis/info/overview.json",*/
+/*"method": "GET",*/
+/*"headers": {*/
+         /*// "content-type": "application/json",*/
+         /*"x-pro360-rest-api-key": "58db15546d6a2b2e17fb96ed",*/
+         /*}*/
+/*}*/
+/*function Compare(obj){*/
+/*const result = []*/
+               /*Object.entries(obj).map(([titleKey,objectValue])=>{*/
+/*Object.entries(objectValue).map(([key,value])=>{*/
+                                              /*// console.log([titleKey]+" = "+[key]+":"+obj[titleKey][key]+":"+[value])*/
+                                              /*result.push([titleKey]+" = "+[key]+":"+obj[titleKey][key]+":"+[value]+'\n')*/
+                                              /*})*/
+/*})*/
+/*return result*/
+/*}*/
+/*function compare(arr1, arr2) {*/
+/*let result = true*/
+             /*arr1.map((e, index)=>{*/
+                                     /*result = result && (arr2.length>index && e==arr2[index])*/
+                                 /*})*/
+/*return result*/
+/*}*/
+/*function CompareValue(newResult,oldResult){*/
+/*let result = true*/
+             /*Object.entries(newResult).map(([titleKey,objectValue])=>{*/
+/*Object.entries(objectValue).map(([key,value])=>{*/
+                                                  /*result = result && (newResult.length == oldResult.length) && (newResult[titleKey][key] == oldResult[titleKey][key])*/
+                                              /*})*/
+/*})*/
+/*console.log(result)*/
+/*return result*/
+/*}*/
+/*// function CompareValue(obj){*/
+/*//     const newResult = []*/
+/*//     const oldResult = []*/
+/*//     const compare = []*/
+/*//     Object.entries(obj).map(([titleKey,objectValue])=>{*/
+/*//         Object.entries(objectValue).map(([key,value])=>{*/
+                                                         /*//             newResult.push()*/
+                                                         /*//             oldResult.push([titleKey]+"="+[key]+":"+[value])*/
+                                                         /*//             compare.push([titleKey]+" = "+[key]+":"+obj[titleKey][key]+":"+[value]+'\n')*/
+                                                         /*//         })*/
+/*//     })*/
+/*//     if (newResult == oldResult){*/
+/*//         console.log('same')*/
+/*//     }else{*/
+        /*//         console.log(compare)*/
+        /*//         // alert(compare)*/
+        /*//     }*/
+/*//     console.log(newResult)*/
+/*//     console.log(oldResult)*/
+/*//     console.log(compare)*/
+/*// }*/
+/*// compare(arr1,arr2) {*/
+/*//*/
+/*//     return result*/
+/*// }*/
+/*const CompareButtons = ({handleCompareClick})=>{*/
+/*return(*/
+/*<div>*/
+ /*<button onClick={handleCompareClick}>*/
+                                     /*Compare*/
+            /*</button>*/
+                                                   /*</div>*/
+/*)*/
+/*}*/
+/*function TemplateObject(obj, searchValue){*/
+/*return(*/
+/*Object.entries(obj).map(([TitleKey,ObjectValue])=>{*/
+/*return(*/
+/*<table key={TitleKey} className="my_table">*/
+                                          /*<tbody>*/
+                                          /*<tr>*/
+                                          /*<h1 key={TitleKey}>{TitleKey}</h1>*/
+                                                                         /*{Object.entries(ObjectValue).map(([key,value])=>{*/
+/*if (!searchValue || key.indexOf(searchValue.toLowerCase())>-1 ||value.toString().indexOf(searchValue.toLowerCase())>-1){*/
+/*return (*/
+/*<tr key={key} className="objectColor">*/
+                                     /*<th>*/
+                                     /*<td key={key}>{key}</td><td>{value}</td>*/
+                                                                          /*</th>*/
+                                                                            /*</tr>*/
+/*)*/
+/*}*/
+/*})}*/
+/*</tr>*/
+  /*</tbody>*/
+    /*</table>*/
+/*)*/
+/*})*/
+/*)*/
+/*}*/
+/*// const TemplateObject = ({obj,searchValue}) => {*/
+/*//     return(*/
+/*//         Object.entries(obj).map(([TitleKey,ObjectValue])=>{*/
+/*//             return(*/
+/*//                 <table key={TitleKey} className="my_table">*/
+/*//                     <tbody>*/
+/*//                     <tr>*/
+/*//                         <h1 key={TitleKey}>{TitleKey}</h1>*/
+/*//                         {Object.entries(ObjectValue).map(([key,value])=>{*/
+/*//                             if (!searchValue || key.indexOf(searchValue.toLowerCase())>-1 ||value.toString().indexOf(searchValue.toLowerCase())>-1){*/
+/*//                                 return (*/
+/*//                                     <tr key={key} className="objectColor">*/
+/*//                                         <th>*/
+/*//                                             <td key={key}>{key}</td><td>{value}</td>*/
+/*//                                         </th>*/
+/*//                                     </tr>*/
+/*//                                 )*/
+/*//                             }*/
+/*//                         })}*/
+/*//                     </tr>*/
+/*//                     </tbody>*/
+/*//                 </table>*/
+/*//             )*/
+/*//         })*/
+/*//     )*/
+/*// }*/
+/*const SearchBar = ({searchValue,handleFilterTextInputChange})=>{*/
+/*return(*/
+/*<input type="text"*/
+/*placeholder="Search..."*/
+/*value={searchValue}*/
+/*onChange={handleFilterTextInputChange}*/
+/*/>*/
+/*)*/
+
+/*}*/
+/*class App extends React.Component{*/
+/*constructor(props) {*/
+/*super(props)*/
+/*this.state = {*/
+    /*response:"no response...",*/
+    /*prev_response: null,*/
+    /*searchValue:''*/
+/*}*/
+/*// add compareClick*/
+   /*this.handleCompareClick = this.handleCompareClick.bind(this)*/
+/*// add search bar*/
+   /*this.handleFilterTextInputChange = this.handleFilterTextInputChange.bind(this)*/
+/*}*/
+
+/*handleFilterTextInputChange(e){*/
+/*this.setState({*/
+    /*searchValue:e.target.value*/
+/*})*/
+/*}*/
+/*handleCompareClick(){*/
+/*CompareValue(this.state.response,this.state.response)*/
+/*// const a1 = [1,2,3]*/
+/*// const a2 = [1,2]*/
+/*// console.log(typeof a1)*/
+/*// console.log(compare(a1,a2))*/
+/*// if (){*/
+/*//     console.log('same')*/
+/*// }else{*/
+    /*//     console.log(Compare(this.state.response).join(''))*/
+    /*// }*/
+/*// alert(Compare(this.state.response).join(''))*/
+/*}*/
+
+/*componentDidMount() {*/
+/*const _this = this*/
+        /*$.ajax(settings).done(function (response) {*/
+/*// console.log(response);*/
+/*_this.setState({response: response})*/
+/*});*/
+/*setInterval(function(){*/
+/*$.ajax(settings).done(function (response) {*/
+/*// console.log(response);*/
+/*// Add Compare function*/
+   /*_this.setState({response: response, prev_response:_this.state.response})*/
+/*Compare(response)*/
+/*});*/
+/*},5000)*/
+/*}*/
+/*render(){*/
+/*return(*/
+/*<div>*/
+ /*<SearchBar*/
+ /*searchValue={this.state.searchValue}*/
+/*handleFilterTextInputChange={this.handleFilterTextInputChange}*/
+/*/>*/
+ /*{TemplateObject(this.state.response, this.state.searchValue)}*/
+/*{!*<TemplateObject obj={this.state.response} searchValue={this.state.searchValue}/>*!}*/
+/*<CompareButtons handleCompareClick={this.handleCompareClick}/>*/
+                                                             /*</div>*/
+/*)*/
+/*}*/
+/*}*/
+/*ReactDOM.render(*/
+/*<App/>,*/
+     /*document.getElementById('root'),*/
+/*)*/
